@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Surgical Ledger Architecture Demo</h1>
+<p>This public build demonstrates architecture only. Proprietary parsing, catalog, and clinical workflow logic are intentionally omitted.</p>
+<ul>
+  <li>Scan events: {{ summary.scan_events }}</li>
+  <li>Trace records: {{ summary.implant_traces }}</li>
+</ul>
+<h2>On-hand demo items</h2>
+<ul>{% for item in items %}<li>{{ item.brand }} / {{ item.model_code }} / {{ item.normalized_power }}</li>{% empty %}<li>No demo items yet.</li>{% endfor %}</ul>
+{% endblock %}

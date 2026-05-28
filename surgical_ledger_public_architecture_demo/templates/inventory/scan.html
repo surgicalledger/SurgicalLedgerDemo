@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Demo Scan</h1>
+<form method="post">{% csrf_token %}{{ form.as_p }}
+<button name="direction" value="IN">Scan IN</button>
+<button name="direction" value="OUT">Scan OUT</button>
+</form>
+<p>Use synthetic input only: <code>DEMO:DEMO_A:MODEL1:+20.0:SERIAL123</code></p>
+{% endblock %}

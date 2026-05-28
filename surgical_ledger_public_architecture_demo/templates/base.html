@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Surgical Ledger Architecture Demo</title></head>
+<body>
+  <nav><a href="/">Dashboard</a> · <a href="/scan/">Scan</a> · <a href="/scan-log/">Scan Log</a></nav>
+  {% for message in messages %}<p>{{ message }}</p>{% endfor %}
+  {% block content %}{% endblock %}
+</body>
+</html>
